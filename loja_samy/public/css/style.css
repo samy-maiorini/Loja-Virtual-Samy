@@ -1,0 +1,249 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    background-color: #212121;
+    color: #fff;
+}
+
+.header{
+    width: 100%;
+    border-radius: 25px;
+    background-color: #000;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.botoes-baixo{
+    display: flex;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.container-produto{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+.pag-produto{
+    display: inline;
+    justify-content: left;
+}
+.produto-info{
+    display: block;
+    justify-content: left;
+}
+
+.preco-card{
+    font-size: 1.2rem;
+    color: red;
+}
+.parcelas-card{
+    padding-left: 3px;
+    font-size: 0.75rem;
+    color: rgb(0, 226, 0);
+}
+.card {
+    border: 1px solid #fff;
+    width: 210px;
+    height: 420px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+.card2 {
+    width: 210px;
+    height: 420px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    transition: all .2s;
+   }
+   
+   .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+
+.card:hover{
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.cardimg {
+    width: 210px;
+    height: 210px;
+    border-radius: 20px;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.info-produto {
+    padding: 20px;
+}
+
+.imgdetalhes{
+    width: 400px;
+    height: 400px;
+    object-fit: fill;
+    background-color: #fff;
+}
+
+.header img{
+    padding-left: 5px;
+    width: 40px;
+    height: 40px;
+    object-fit: fill;
+    display: flex;
+    position: absolute;
+    align-items: left;
+    justify-content: left;
+}
+/* BOTAO DETALHES NA TELA PRINCIPAL */
+.botao-principal {
+    color: #fff;
+    width: fit-content;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1.5px solid #fff;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+  }
+  
+  .botao-principal:hover {
+    color: #fff;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 70%);
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .botao-principal:active {
+    transform: scale(0.95);
+  }
+/* FIM */
+
+/* botao COMPRAR NA TELA detalhes */
+.botao-detalhes {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       hsl(340deg 100% 16%) 0%,
+       hsl(340deg 100% 32%) 8%,
+       hsl(340deg 100% 32%) 92%,
+       hsl(340deg 100% 16%) 100%
+     );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .botao-detalhes:hover {
+    filter: brightness(110%);
+   }
+   
+   .botao-detalhes:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .botao-detalhes:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   .botao-detalhes:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   .botao-detalhes:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   .botao-detalhes:focus:not(:focus-visible) {
+    outline: none;
+   }
+   /* fim */
